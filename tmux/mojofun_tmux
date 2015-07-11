@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# name     : mojofun_tmux，mojo code reading in tmux env
+# author   : jzhangkun
+# license  : GPL
+# created  : Tue Jun 30 15:13:10 CST 2015
+# modified : Tue Jun 30 15:13:10 CST 2015
+#
+
+cmd=$(which tmux) # tmux path
+session=-mojofun  # session name
+
+if [ -z $cmd ]; then
+  echo "You need to install tmux."
+  exit 1
+fi
+
+$cmd has -t $session
+
+if [ $? != 0 ]; then
+  cd "/Users/jzhangkun/perl5/perlbrew/perls/perl-5.16.0/lib/site_perl/5.16.0/Mojo"
+  # code one
+  $cmd new -d -n "hello" -s $session "zsh"
+  $cmd splitw -h -p 40 -t $session
+  $cmd selectp -L 
+  # code two
+  $cmd neww -n "world" -t $session "zsh"
+  $cmd splitw -h -p 40 -t $session
+  $cmd selectp -L 
+  # man env
+  #$cmd neww -n "world" -t $session
+  #$cmd splitw -h -p 50 -t $session
+  #$cmd splitw -v -p 50 -t $session
+  #$cmd selectp -L 
+  # basic event
+  $cmd neww -n "event" -t $session "vim EventEmitter.pm"
+  $cmd selectw -t $session:1
+fi
+
+$cmd att -t $session
+
+exit 0
