@@ -1,5 +1,7 @@
 #!/usr/bin/env perl
+# just for fun
 use strict;
+use warnings;
 
 BEGIN { srand(time()) }
 while (1) {
