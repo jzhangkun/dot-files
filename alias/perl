@@ -1,0 +1,4 @@
+# perl core modules
+alias perl-core-module='perl -MModule::CoreList -le "print foreach Module::CoreList->find_modules"'
+# perl installed modules
+alias perl-installed-module='perl -MExtUtils::Installed -le "print for ExtUtils::Installed->new->modules"'

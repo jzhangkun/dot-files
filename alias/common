@@ -1,0 +1,7 @@
+# OPEN_SOFT/ aliases
+alias ls="clear && ls -G";
+alias ll="clear && ls -lG"
+alias la="clear && ls -alG"
+alias grep='grep --color'
+alias egrep='egrep --color'
+alias fgrep='fgrep --color'
