@@ -21,7 +21,12 @@ set termencoding=utf-8
 set fileformat=unix
 set encoding=utf-8
 " 配色方案
-colorscheme desert
+"colorscheme gruvbox
+colorscheme peaksea
+"colorscheme twilight
+"colorscheme molokai
+"colorscheme desert
+
 " 指定配色方案是256色
 set t_Co=256
 
@@ -82,6 +87,8 @@ set completeopt=longest,menu
 
 " 去掉输入错误提示声音
 set noeb
+" 所有事件下（包括错按esc，错按backspace）不发出声音
+set belloff=all
 " 自动保存
 set autowrite
 " 突出显示当前行 

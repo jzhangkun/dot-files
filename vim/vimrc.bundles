@@ -37,7 +37,6 @@ Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/tComment'
 Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'godlygeek/tabular'
 Plugin 'msanders/snipmate.vim'
@@ -49,6 +48,12 @@ Plugin 'groenewege/vim-less'
 Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'klen/python-mode'
+
+"--------------
+" IDE features
+"--------------
+Bundle 'scrooloose/nerdtree'
+map <F2> :NERDTreeToggle<CR>
 
 " markup language
 Plugin 'tpope/vim-markdown'
